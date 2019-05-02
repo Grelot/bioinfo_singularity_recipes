@@ -1,0 +1,2 @@
+# bioinfo_singularity_recipes
+Signularity recipies for bioinformatic pipelines
