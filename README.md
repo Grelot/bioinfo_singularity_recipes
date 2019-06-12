@@ -1,2 +1,15 @@
 # bioinfo_singularity_recipes
-Signularity recipies for bioinformatic pipelines
+Singularity recipies for bioinformatic pipelines
+
+GUERIN Pierre-Edouard, 2019-05-05
+
+********************************************************************
+
+We provides ready to run versions of [Singularity containers](https://www.sylabs.io/) [![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/2878)
+
+
+# 1 Singularity container
+
+## 1.1 Install Singularity
+See [https://www.sylabs.io/docs/](https://www.sylabs.io/docs/) for instructions to install Singularity.
+
