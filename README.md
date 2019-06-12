@@ -16,7 +16,13 @@ See [https://www.sylabs.io/docs/](https://www.sylabs.io/docs/) for instructions 
 
 ## 1.2 Obitools
 
-The [OBITools package](http://metabarcoding.org/obitools) is a set of programs specifically designed for analyzing NGS data in a DNA metabarcoding context, taking into account taxonomic information.
+- The [OBITools package](http://metabarcoding.org/obitools) is a set of programs specifically designed for analyzing NGS data in a DNA metabarcoding context, taking into account taxonomic information.
+
+- [ecoPrimers](https://git.metabarcoding.org/obitools/ecoprimers/) is a software that finds primers from a set of sequences.
+
+- [ecoPCR](https://git.metabarcoding.org/obitools/ecopcr/) simulate _in silico_ PCR digestion.
+
+
 
 ### 1.2.1 Download the Obitools container
 
