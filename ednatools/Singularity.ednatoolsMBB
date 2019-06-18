@@ -5,7 +5,7 @@ Include: bash vim less man-db apt-utils tzdata
 
 
 %runscript
-    echo "Opening container...ubuntu xenial: vsearch, PEAR, fastq-join, pandaseq, jellyfish, casper, FLASH, fastq-multx, cutadapt, SWARM, REAPER, tally, minion, swan, tagCleaner, flexbar, usearch, deML "
+    echo "Opening container...ubuntu beaver: vsearch, PEAR, fastq-join, pandaseq, jellyfish, casper, FLASH, fastq-multx, cutadapt, SWARM, REAPER, tally, minion, swan, tagCleaner, flexbar, usearch, deML "
 
 %environment
     LC_ALL=C
