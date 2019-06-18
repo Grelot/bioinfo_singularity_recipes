@@ -19,9 +19,9 @@ See [https://www.sylabs.io/docs/](https://www.sylabs.io/docs/) for instructions 
 
 ## 1.2 Obitools
 
-- The [OBITools package](http://metabarcoding.org/obitools) is a set of programs specifically designed for analyzing NGS data in a DNA metabarcoding context, taking into account taxonomic information.
-- [ecoPrimers](https://git.metabarcoding.org/obitools/ecoprimers/) is a software that finds primers from a set of sequences.
-- [ecoPCR](https://git.metabarcoding.org/obitools/ecopcr/) simulate _in silico_ PCR digestion.
+- The [OBITools package 1.0](http://metabarcoding.org/obitools) is a set of programs specifically designed for analyzing NGS data in a DNA metabarcoding context, taking into account taxonomic information.
+- [ecoPrimers 1.0.1](https://git.metabarcoding.org/obitools/ecoprimers/) is a software that finds primers from a set of sequences.
+- [ecoPCR 0.5](https://git.metabarcoding.org/obitools/ecopcr/) simulate _in silico_ PCR digestion.
 
 
 ### 1.2.1 Download the Obitools container
@@ -80,7 +80,7 @@ singularity exec obitools.img ecoPrimers --help
 - [TAGcleaner 0.16](http://tagcleaner.sourceforge.net/) detects and trims tag sequences from sequence data.
 - [Flexbar 3.0.3](https://github.com/seqan/flexbar) preprocesses high-throughput sequencing data efficiently. It demultiplexes barcoded runs and removes adapter sequences. Several adapter removal presets for Illumina libraries are included. 
 - [usearch 11.0.667](https://www.drive5.com/usearch/) offers search and clustering algorithms that are often orders of magnitude faster than BLAST. 
-- [deML 1](https://grenaud.github.io/deML/) demultiplexes Illumina sequences.
+- [deML 1.0](https://grenaud.github.io/deML/) demultiplexes Illumina sequences.
 
 ### 1.3.1 Download the eDNA analysis container
 
