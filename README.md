@@ -89,7 +89,7 @@ singularity pull --name ednatools.img shub://Grelot/bioinfo_singularity_recipes:
 ```
 Alternatively, if you're using the [Montpellier Bioinformatics Biodiversity platform](https://mbb.univ-montp2.fr/MBB/index.php), download this custom container :
 ```
-singularity pull --name obitools.img shub://Grelot/bioinfo_singularity_recipes:ednatoolsmbb
+singularity pull --name ednatools.img shub://Grelot/bioinfo_singularity_recipes:ednatoolsmbb
 ```
 
 ### 1.3.2 Run the eDNA analysis  container
