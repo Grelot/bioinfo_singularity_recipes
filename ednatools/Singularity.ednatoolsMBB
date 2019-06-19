@@ -1,5 +1,5 @@
 BootStrap: debootstrap
-OSVersion: bionic
+OSVersion: xenial
 MirrorURL: http://us.archive.ubuntu.com/ubuntu/
 Include: bash vim less man-db apt-utils tzdata
 
