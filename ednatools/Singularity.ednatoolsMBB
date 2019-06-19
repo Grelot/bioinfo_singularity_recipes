@@ -1,16 +1,12 @@
 BootStrap: debootstrap
 OSVersion: xenial
 MirrorURL: http://us.archive.ubuntu.com/ubuntu/
+IncludeCmd: yes
 Include: bash vim less man-db apt-utils tzdata
 
 
 %runscript
-    echo "Opening container...ubuntu beaver: vsearch, PEAR, fastq-join, pandaseq, jellyfish, casper, FLASH, fastq-multx, cutadapt, SWARM, REAPER, tally, minion, swan, tagCleaner, flexbar, usearch, deML "
-
-%environment
-    LC_ALL=C
-    LD_LIBRARY_PATH=/usr/local/lib64:/usr/local/lib:/usr/lib64:/usr/lib:/lib64:/lib
-    TZ='America/New_York'
+    echo "Opening container...ubuntu xenial: vsearch, PEAR, fastq-join, pandaseq, jellyfish, casper, FLASH, fastq-multx, cutadapt, SWARM, REAPER, tally, minion, swan, tagCleaner, flexbar, usearch, deML "
 
 
 %labels
@@ -35,7 +31,7 @@ Include: bash vim less man-db apt-utils tzdata
     TAGCLEANER 0.16
     FLEXBAR 3.0.3
     USEARCH 11.0.667
-    deML 1
+    deML 1.0
 
 
 
