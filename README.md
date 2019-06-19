@@ -137,3 +137,30 @@ singularity exec ednatools.img usearch
 ## deML
 singularity exec ednatools.img deML -h
 ```
+
+
+## 1.4 R for metabarcoding analysis
+
+This recipe have been written thanks to [RPACIB](https://shiny.mbb.univ-montp2.fr/RPACIB/)
+
+R with useful packages for metabarcoding analysis
+
+- [R 3.6.0](https://cran.r-project.org/)
+- `R-packages` tidyverse, rlang, dada2, seqRFLP, phyloseq
+
+
+### 1.4.1 Download the container
+
+```
+singularity pull --name ednaR.img shub://Grelot/bioinfo_singularity_recipes:ednar
+```
+### 1.3.2 Run R from the container
+
+```
+singularity run ednaR.img
+R
+```
+or
+```
+singularity exec ednaR.img R
+```
