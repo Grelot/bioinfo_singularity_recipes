@@ -148,19 +148,34 @@ R with useful packages for metabarcoding analysis
 - [R 3.6.0](https://cran.r-project.org/)
 - `R-packages` tidyverse, rlang, dada2, seqRFLP, phyloseq
 
-
-### 1.4.1 Download the container
-
+Download the container
 ```
 singularity pull --name ednaR.img shub://Grelot/bioinfo_singularity_recipes:ednar
 ```
-### 1.3.2 Run R from the container
-
+Run R from the container
 ```
-singularity run ednaR.img
+singularity shell ednaR.img
 R
 ```
 or
 ```
 singularity exec ednaR.img R
+```
+
+
+
+
+## 1.5 Grinder
+
+Grinder is a versatile open-source bioinformatic tool to create simulated omic shotgun and amplicon sequence libraries for all main sequencing platforms.
+
+- [Grinder 0.5.3](https://github.com/zyxue/biogrinder)
+- [bioperl 5.22.1](https://bioperl.org/)
+
+
+Download the container and run Grinder from the container
+
+```
+singularity pull --name grinder.img shub://Grelot/bioinfo_singularity_recipes:grindermbb
+singularity exec grinder.img grinder -h
 ```
