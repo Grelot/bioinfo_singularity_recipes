@@ -50,6 +50,9 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     apt install wget
     yes | apt-get install autoconf autogen
 
+    ## pigz
+    yes | apt install pigz
+
     ## PERL
     apt-get install -y --force-yes perl
     echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
