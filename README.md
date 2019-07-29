@@ -1,4 +1,4 @@
-[![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/2878)
+[![https://www.singularity-hub.org/static/simg/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/2878)
 
 # bioinfo_singularity_recipes
 Singularity recipies for bioinformatic pipelines
@@ -27,12 +27,12 @@ See [https://www.sylabs.io/docs/](https://www.sylabs.io/docs/) for instructions 
 ### 1.2.1 Download the Obitools container
 
 ```
-singularity pull --name obitools.img shub://Grelot/bioinfo_singularity_recipes:obitools
+singularity pull --name obitools.simg shub://Grelot/bioinfo_singularity_recipes:obitools
 ```
 
 Alternatively, if you're using the [Montpellier Bioinformatics Biodiversity platform](https://mbb.univ-montp2.fr/MBB/index.php), download this custom container :
 ```
-singularity pull --name obitools.img shub://Grelot/bioinfo_singularity_recipes:obitoolsmbb
+singularity pull --name obitools.simg shub://Grelot/bioinfo_singularity_recipes:obitoolsmbb
 ```
 
 ### 1.2.2 Run the Obitools container
@@ -85,17 +85,17 @@ singularity exec obitools.img ecoPrimers --help
 ### 1.3.1 Download the eDNA analysis container
 
 ```
-singularity pull --name ednatools.img shub://Grelot/bioinfo_singularity_recipes:ednatools
+singularity pull --name ednatools.simg shub://Grelot/bioinfo_singularity_recipes:ednatools
 ```
 Alternatively, if you're using the [Montpellier Bioinformatics Biodiversity platform](https://mbb.univ-montp2.fr/MBB/index.php), download this custom container :
 ```
-singularity pull --name ednatools.img shub://Grelot/bioinfo_singularity_recipes:ednatoolsmbb
+singularity pull --name ednatools.simg shub://Grelot/bioinfo_singularity_recipes:ednatoolsmbb
 ```
 
 ### 1.3.2 Run the eDNA analysis  container
 
 ```
-singularity run ednatools.img
+singularity run ednatools.simg
 ```
 it should output:
 ```
@@ -107,35 +107,35 @@ Opening container...ubuntu beaver: vsearch, PEAR, fastq-join, pandaseq, jellyfis
 
 ```
 ## vsearch
-singularity exec ednatools.img vsearch -h
+singularity exec ednatools.simg vsearch -h
 ## pear
-singularity exec ednatools.img pear -h
+singularity exec ednatools.simg pear -h
 ## pandaseq
-singularity exec ednatools.img pandaseq -h
+singularity exec ednatools.simg pandaseq -h
 ## casper
-singularity exec ednatools.img casper -h
+singularity exec ednatools.simg casper -h
 ## FLASh
-singularity exec ednatools.img flash -h
+singularity exec ednatools.simg flash -h
 ## fastq-multx
-singularity exec ednatools.img fastq-multx -h
+singularity exec ednatools.simg fastq-multx -h
 ## fastq-join
-singularity exec ednatools.img fastq-join -h
+singularity exec ednatools.simg fastq-join -h
 ## cutadapt
-singularity exec ednatools.img cutadapt -h
+singularity exec ednatools.simg cutadapt -h
 ## SWARM
-singularity exec ednatools.img swarm -h
+singularity exec ednatools.simg swarm -h
 ## Reaper
-singularity exec ednatools.img reaper -h
-singularity exec ednatools.img tally -h
-singularity exec ednatools.img minion -h
+singularity exec ednatools.simg reaper -h
+singularity exec ednatools.simg tally -h
+singularity exec ednatools.simg minion -h
 ## TAGcleaner
-singularity exec ednatools.img tagcleaner -h
+singularity exec ednatools.simg tagcleaner -h
 ## Flexbar
-singularity exec ednatools.img flexbar -h
+singularity exec ednatools.simg flexbar -h
 ## usearch
-singularity exec ednatools.img usearch
+singularity exec ednatools.simg usearch
 ## deML
-singularity exec ednatools.img deML -h
+singularity exec ednatools.simg deML -h
 ```
 
 
@@ -150,16 +150,16 @@ R with useful packages for metabarcoding analysis
 
 Download the container
 ```
-singularity pull --name ednaR.img shub://Grelot/bioinfo_singularity_recipes:ednar
+singularity pull --name ednaR.simg shub://Grelot/bioinfo_singularity_recipes:ednar
 ```
 Run R from the container
 ```
-singularity shell ednaR.img
+singularity shell ednaR.simg
 R
 ```
 or
 ```
-singularity exec ednaR.img R
+singularity exec ednaR.simg R
 ```
 
 
@@ -176,6 +176,6 @@ Grinder is a versatile open-source bioinformatic tool to create simulated omic s
 Download the container and run Grinder from the container
 
 ```
-singularity pull --name grinder.img shub://Grelot/bioinfo_singularity_recipes:grindermbb
-singularity exec grinder.img grinder -h
+singularity pull --name grinder.simg shub://Grelot/bioinfo_singularity_recipes:grindermbb
+singularity exec grinder.simg grinder -h
 ```
