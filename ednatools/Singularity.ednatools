@@ -5,19 +5,16 @@ Include: bash vim less man-db apt-utils tzdata
 
 
 %runscript
-    echo "Opening container...ubuntu beaver: vsearch, PEAR, fastq-join, pandaseq, jellyfish, casper, FLASH, fastq-multx, cutadapt, SWARM, REAPER, tally, minion, swan, tagCleaner, flexbar, usearch, deML "
+    echo "Opening container...ubuntu beaver: vsearch, PEAR, fastq-join, pandaseq, jellyfish, casper, FLASH, fastq-multx, cutadapt, SWARM, REAPER, tally, minion, swan, tagCleaner, flexbar, usearch, deML, trimmomatic "
 
 %environment
-    LC_ALL=C
-    LD_LIBRARY_PATH=/usr/local/lib64:/usr/local/lib:/usr/lib64:/usr/lib:/lib64:/lib
-    TZ='America/New_York'
-
+    export LC_ALL=en_US.UTF-8
 
 %labels
     MAINTAINER Pierre-Edouard_GUERIN
     INSTITUTE CNRS
     TEAM Biogeographie_Ecologie_Vertebres
-    BUILD 1.0
+    BUILD 1.1
     SINGULARITY_VERSION 2.4.2-dist
     PERL 5.26.1
     PYTHON 3.6.8
@@ -36,8 +33,8 @@ Include: bash vim less man-db apt-utils tzdata
     FLEXBAR 3.0.3
     USEARCH 11.0.667
     deML 1
-
-
+    JAVA 8.0
+    Trimmomatic 0.33
 
 
 %post
@@ -65,8 +62,14 @@ Include: bash vim less man-db apt-utils tzdata
     ## zlib, boost, cmake
     yes | apt install zlib1g-dev libbz2-dev pkg-config libboost-all-dev gettext cmake
 
+    ## curl, lzma
+    yes | apt-get install curl liblzma-dev libncurses5-dev
+
     ## python3
     yes | apt install python3-pip
+
+    ## JAVA
+    yes | apt-get install openjdk-8-jdk
 
     ## GNU parallel
     yes | apt install parallel
@@ -82,6 +85,14 @@ Include: bash vim less man-db apt-utils tzdata
     ./configure
     make
     make install
+    cd ..
+
+    ## trimmomatic
+    curl -O http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-0.33.zip
+    yes | unzip Trimmomatic-0.33.zip
+    cd Trimmomatic-0.33
+    cp -f ./adapters/* /usr/local/bin
+    cp -f trimmomatic-0.33.jar /usr/local/bin
     cd ..
 
     ## PEAR
