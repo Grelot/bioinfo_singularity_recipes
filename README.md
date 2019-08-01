@@ -49,7 +49,7 @@ Opening container...ubuntu xenial: OBITOOLS,ecoPRIMERS,ecoPCR
 
 ```
 ## OBITOOLS: illuminapairedend 
-singularity exec obitools.img illuminapairedend --help
+singularity exec obitools.simg illuminapairedend --help
 ## OBITOOLS: ngsfilter
 singularity exec obitools.simg ngsfilter --help
 ## OBITOOLS: obigrep
