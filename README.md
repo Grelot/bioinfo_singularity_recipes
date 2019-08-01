@@ -38,7 +38,7 @@ singularity pull --name obitools.simg shub://Grelot/bioinfo_singularity_recipes:
 ### 1.2.2 Run the Obitools container
 
 ```
-singularity run obitools.img
+singularity run obitools.simg
 ```
 it should output:
 ```
@@ -51,17 +51,17 @@ Opening container...ubuntu xenial: OBITOOLS,ecoPRIMERS,ecoPCR
 ## OBITOOLS: illuminapairedend 
 singularity exec obitools.img illuminapairedend --help
 ## OBITOOLS: ngsfilter
-singularity exec obitools.img ngsfilter --help
+singularity exec obitools.simg ngsfilter --help
 ## OBITOOLS: obigrep
-singularity exec obitools.img obigrep --help
+singularity exec obitools.simg obigrep --help
 ## OBITOOLS: obiclean
-singularity exec obitools.img obiclean --help
+singularity exec obitools.simg obiclean --help
 ## OBITOOLS: ecotag
-singularity exec obitools.img obiclean --help
+singularity exec obitools.simg obiclean --help
 ## ecoPCR
-singularity exec obitools.img ecoPCR --help
+singularity exec obitools.simg ecoPCR --help
 ## ecoPrimers
-singularity exec obitools.img ecoPrimers --help
+singularity exec obitools.simg ecoPrimers --help
 ```
 
 ## 1.3 Useful programs for eDNA analysis
