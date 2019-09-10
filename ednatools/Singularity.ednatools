@@ -5,7 +5,7 @@ Include: bash vim less man-db apt-utils tzdata
 
 
 %runscript
-    echo "Opening container...ubuntu beaver: vsearch, PEAR, fastq-join, pandaseq, jellyfish, casper, FLASH, fastq-multx, cutadapt, SWARM, REAPER, tally, minion, swan, tagCleaner, flexbar, usearch, deML, trimmomatic "
+    echo "Opening container...ubuntu beaver: vsearch, PEAR, fastq-join, pandaseq, jellyfish, casper, FLASH, fastq-multx, cutadapt, SWARM, REAPER, tally, minion, swan, tagCleaner, flexbar, usearch, deML, trimmomatic, prinseq "
 
 %environment
     export LC_ALL=en_US.UTF-8
@@ -14,7 +14,7 @@ Include: bash vim less man-db apt-utils tzdata
     MAINTAINER Pierre-Edouard_GUERIN
     INSTITUTE CNRS
     TEAM Biogeographie_Ecologie_Vertebres
-    BUILD 1.1
+    BUILD 1.2
     SINGULARITY_VERSION 2.4.2-dist
     PERL 5.26.1
     PYTHON 3.6.8
@@ -35,6 +35,7 @@ Include: bash vim less man-db apt-utils tzdata
     deML 1
     JAVA 8.0
     Trimmomatic 0.33
+    prinseq 0.20.4
 
 
 %post
@@ -196,3 +197,7 @@ Include: bash vim less man-db apt-utils tzdata
     make    
     cp src/deML /usr/local/bin/deML
     cd ..
+
+    ## Prinseq
+    wget https://github.com/Grelot/bioinfo_singularity_recipes/raw/master/packages/prinseq-lite-0.20.4.tar.gz
+    tar xzf prinseq-lite-0.20.4.tar.gz
