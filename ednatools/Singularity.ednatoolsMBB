@@ -35,8 +35,8 @@ Include: bash vim less man-db apt-utils tzdata
     prinseq 0.20.4
 
 
-%environment
-    export LC_ALL=en_US.UTF-8
+%environment    
+    export LC_ALL=C.UTF-8
 
 
 %post
