@@ -64,8 +64,8 @@ Include: bash vim less man-db apt-utils tzdata
     ## zlib, boost, cmake
     yes | apt install zlib1g-dev libbz2-dev pkg-config libboost-all-dev gettext cmake
 
-    ## curl, lzma, unzip
-    yes | apt-get install curl liblzma-dev libncurses5-dev unzip
+    ## curl, lzma, unzip, pigz
+    yes | apt-get install curl liblzma-dev libncurses5-dev unzip pigz
 
     ## python3
     yes | apt install python3-pip
