@@ -73,8 +73,8 @@ Include: bash vim less man-db apt-utils tzdata
     yes | apt install wget
     yes | apt-get install autoconf autogen libtool
 
-    ## zlib, boost, cmake
-    yes | apt install zlib1g-dev libbz2-dev pkg-config libboost-all-dev gettext cmake
+    ## zlib, boost, cmake, pigz
+    yes | apt install zlib1g-dev libbz2-dev pkg-config libboost-all-dev gettext cmake pigz
 
     ## python3
     yes | apt install python3-pip
