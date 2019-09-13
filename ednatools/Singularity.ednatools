@@ -69,7 +69,7 @@ Include: bash vim less man-db apt-utils tzdata
 
 
     ## pip, biopython2
-    yes | apt install python2-pip
+    yes | apt install python-pip
     yes | pip2 install biopython
 
 
