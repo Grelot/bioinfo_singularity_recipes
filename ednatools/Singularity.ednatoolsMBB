@@ -76,6 +76,12 @@ Include: bash vim less man-db apt-utils tzdata
     ## zlib, boost, cmake, pigz
     yes | apt install zlib1g-dev libbz2-dev pkg-config libboost-all-dev gettext cmake pigz
 
+
+    ## pip, biopython2
+    yes | apt install python-pip
+    yes | pip2 install biopython
+
+
     ## python3
     yes | apt install python3-pip
 
