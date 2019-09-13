@@ -79,8 +79,8 @@ Include: bash vim less man-db apt-utils tzdata
 
     ## pip, biopython2
     yes | apt install python-pip
-    yes | pip install --upgrade pip
-    yes | pip2 install biopython
+    yes | pip2 install --upgrade pip
+    yes | pip2 install numpy biopython
 
 
     ## python3
