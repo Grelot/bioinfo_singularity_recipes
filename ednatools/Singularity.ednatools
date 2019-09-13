@@ -67,6 +67,11 @@ Include: bash vim less man-db apt-utils tzdata
     ## curl, lzma, unzip, pigz
     yes | apt-get install curl liblzma-dev libncurses5-dev unzip pigz
 
+
+    ## biopython2
+    yes | pip2 install biopython
+
+
     ## python3
     yes | apt install python3-pip
 
