@@ -80,12 +80,10 @@ Include: bash vim less man-db apt-utils tzdata
     ## pip, biopython2
     yes | apt-get install python-setuptools
     yes | apt-get install python-dev
+    yes | apt-get install python-numpy
+    yes | apt-get install python-biopython
     yes | apt install python-pip
     yes | apt-get update
-    yes | pip2 install --upgrade pip
-    yes | pip2 install --upgrade setuptools
-    yes | pip2 install numpy biopython
-
 
     ## python3
     yes | apt install python3-pip
