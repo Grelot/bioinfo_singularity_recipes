@@ -36,7 +36,7 @@ Include: bash vim less man-db apt-utils tzdata
 
 
 %environment    
-    export LC_ALL=C.UTF-8
+    export LC_ALL=C
 
 
 %post
@@ -81,6 +81,7 @@ Include: bash vim less man-db apt-utils tzdata
     yes | apt-get install python-setuptools
     yes | apt-get install python-dev
     yes | apt install python-pip
+    yes | apt-get update
     yes | pip2 install --upgrade pip
     yes | pip2 install --upgrade setuptools
     yes | pip2 install numpy biopython
