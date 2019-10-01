@@ -58,3 +58,6 @@ Include: bash vim less man-db apt-utils tzdata
 	make
 	make install
 
+    ## R bioconductor
+    yes | R --slave e "source('http://bioconductor.org/biocLite.R'); biocLite('DECIPHER')"
+
