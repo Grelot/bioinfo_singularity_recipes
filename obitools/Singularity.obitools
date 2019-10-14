@@ -75,8 +75,13 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     cd ecopcr/src/
     yes | make
     cp ecoPCR /usr/local/bin/ecoPCR
-    cd ../../
-    
+    cd $HOME
+
+
+    ## EMBOSS seqret
+    yes | apt install emboss
+   
+
 
 
 
