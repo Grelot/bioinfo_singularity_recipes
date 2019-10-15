@@ -1,15 +1,19 @@
-[![https://www.singularity-hub.org/static/simg/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/2878)
+
 
 # bioinfo_singularity_recipes
+
+[![https://www.singularity-hub.org/static/simg/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/2878)
+
 Singularity recipies for bioinformatic pipelines
 
-GUERIN Pierre-Edouard, 2019-05-05
+**Pierre-Edouard Guerin, 2019**
 
-______
+_______________________________________________________________________________
 
 
 We provide ready to run versions of [Singularity containers](https://www.sylabs.io/)
 
+_______________________________________________________________________________
 
 
 # 1 Singularity containers
@@ -43,7 +47,7 @@ singularity run obitools.simg
 ```
 it should output:
 ```
-Opening container...ubuntu xenial: OBITOOLS,ecoPRIMERS,ecoPCR, EMBOSS
+Opening container...ubuntu xenial: OBITOOLS, ecoPRIMERS, ecoPCR, EMBOSS
 ```
 
 ### 1.2.3 Execute some programs from the container
