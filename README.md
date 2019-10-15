@@ -22,6 +22,7 @@ See [https://www.sylabs.io/docs/](https://www.sylabs.io/docs/) for instructions 
 - The [OBITools package 1.0](http://metabarcoding.org/obitools) is a set of programs specifically designed for analyzing NGS data in a DNA metabarcoding context, taking into account taxonomic information.
 - [ecoPrimers 1.0.1](https://git.metabarcoding.org/obitools/ecoprimers/) is a software that finds primers from a set of sequences.
 - [ecoPCR 0.5](https://git.metabarcoding.org/obitools/ecopcr/) simulate _in silico_ PCR digestion.
+- [EMBOSS](http://www.bioinformatics.nl/emboss-explorer/) is "The European Molecular Biology Open Software Suite". It is a free Open Source software analysis package specially developed for the needs of the molecular biology
 
 
 ### 1.2.1 Download the Obitools container
@@ -42,7 +43,7 @@ singularity run obitools.simg
 ```
 it should output:
 ```
-Opening container...ubuntu xenial: OBITOOLS,ecoPRIMERS,ecoPCR
+Opening container...ubuntu xenial: OBITOOLS,ecoPRIMERS,ecoPCR, EMBOSS
 ```
 
 ### 1.2.3 Execute some programs from the container
@@ -62,6 +63,8 @@ singularity exec obitools.simg obiclean --help
 singularity exec obitools.simg ecoPCR --help
 ## ecoPrimers
 singularity exec obitools.simg ecoPrimers --help
+## seqret
+singularity exec obitools.simg seqret --help
 ```
 
 ## 1.3 Useful programs for eDNA analysis
