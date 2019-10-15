@@ -3,7 +3,7 @@ OSVersion: xenial
 MirrorURL: http://us.archive.ubuntu.com/ubuntu/
 
 %runscript
-    echo "Opening container...ubuntu xenial: OBITOOLS,ecoPRIMERS,ecoPCR"
+    echo "Opening container...ubuntu xenial: OBITOOLS, ecoPRIMERS, ecoPCR, EMBOSS"
 
 %labels
     MAINTAINER Pierre-Edouard_GUERIN
@@ -14,6 +14,7 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     Obitools 1.0
     ecoPCR 1.0.1
     ecoPrimers 0.5
+     EMBOSS 6.6
 
 %post   
     mv /etc/apt/sources.list /etc/apt/sources.list.bak
