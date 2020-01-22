@@ -71,6 +71,7 @@ Include: bash vim less man-db apt-utils tzdata
     yes | apt-get install openjdk-8-jdk
 
     ## vsearch
+    cd $HOME
     wget https://github.com/torognes/vsearch/archive/v2.13.4.tar.gz
     tar xzf v2.13.4.tar.gz
     cd vsearch-2.13.4
@@ -94,6 +95,7 @@ Include: bash vim less man-db apt-utils tzdata
     mv bin/* /usr/local/bin/
 
     ## usearch
+    cd $HOME
     wget https://github.com/Grelot/bioinfo_singularity_recipes/raw/master/packages/usearch11.0.667_i86linux32 -O /usr/local/bin/usearch
     chmod 755 /usr/local/bin/usearch
 
@@ -107,6 +109,7 @@ Include: bash vim less man-db apt-utils tzdata
 	make install
 
 	## install JAMP dependencies
+	cd $HOME
 	R --slave -e "install.packages(c('devtools', 'bold', 'XML', 'seqinr', 'fastqcr'), dependencies=T, repos='https://cloud.r-project.org')"
 	R --slave -e "devtools::install_dev('r-lib/remotes')"
 	R --slave -e "devtools::install_github('ropensci/rentrez')"
