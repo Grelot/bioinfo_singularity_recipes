@@ -50,7 +50,7 @@ Include: bash vim less man-db apt-utils tzdata
     yes | apt-get install libblas3 libblas-dev liblapack-dev liblapack3 gcc fort77 aptitude
 	yes | aptitude install -y g++ xorg-dev libreadline-dev  gfortran
 	yes | apt-get install libssl-dev libxml2-dev libpcre3-dev liblzma-dev libbz2-dev libcurl4-openssl-dev
-	yes | sudo apt-get install locales
+	yes | apt-get install locales
 	echo "LC_ALL=en_US.UTF-8" >> /etc/environment
 	echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 	echo "LANG=en_US.UTF-8" > /etc/locale.conf
