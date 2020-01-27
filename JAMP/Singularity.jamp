@@ -8,8 +8,8 @@ Include: bash vim less man-db apt-utils tzdata
     MAINTAINER Pierre-Edouard_GUERIN
     INSTITUTE CNRS
     TEAM Biogeographie_Ecologie_Vertebres
-    BUILD 1.0
-    SINGULARITY_VERSION 2.5.2-dist
+    BUILD 1.2
+    SINGULARITY_VERSION 2.4.2-dist
 
 
 
