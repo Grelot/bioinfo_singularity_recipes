@@ -111,7 +111,7 @@ Include: bash vim less man-db apt-utils tzdata
 	## install JAMP dependencies
 	cd $HOME
 	R --slave -e "install.packages(c('devtools', 'bold', 'XML', 'seqinr', 'fastqcr'), dependencies=T, repos='https://cloud.r-project.org')"
-	R --slave -e "devtools::install_dev('r-lib/remotes')"
+	R --slave -e 'source("https://install-github.me/r-lib/remotes")'
 	R --slave -e "devtools::install_github('ropensci/rentrez')"
 	R --slave -e "devtools::install_github('VascoElbrecht/PrimerMiner', subdir='PrimerMiner')"
 	R --slave -e "devtools::install_github('VascoElbrecht/JAMP', subdir='JAMP')"
