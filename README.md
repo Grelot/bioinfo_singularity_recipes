@@ -4,9 +4,9 @@
 
 [![https://www.singularity-hub.org/static/simg/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/2878)
 
-Singularity recipies for bioinformatic pipelines
+Singularity recipies I cooked for bioinformatic pipelines
 
-**Pierre-Edouard Guerin, 2019**
+**Pierre-Edouard Guerin, 2019-2021**
 
 _______________________________________________________________________________
 
@@ -16,12 +16,13 @@ We provide ready to run versions of [Singularity containers](https://www.sylabs.
 _______________________________________________________________________________
 
 
-# 1 Singularity containers
 
-## 1.1 Install Singularity
+
+
+# 1. Install Singularity
 See [https://www.sylabs.io/docs/](https://www.sylabs.io/docs/) for instructions to install Singularity.
 
-## 1.2 Obitools
+# 2. Obitools
 
 - The [OBITools package 1.0](http://metabarcoding.org/obitools) is a set of programs specifically designed for analyzing NGS data in a DNA metabarcoding context, taking into account taxonomic information.
 - [ecoPrimers 1.0.1](https://git.metabarcoding.org/obitools/ecoprimers/) is a software that finds primers from a set of sequences.
@@ -29,7 +30,7 @@ See [https://www.sylabs.io/docs/](https://www.sylabs.io/docs/) for instructions 
 - [EMBOSS](http://www.bioinformatics.nl/emboss-explorer/) is "The European Molecular Biology Open Software Suite". It is a free Open Source software analysis package specially developed for the needs of the molecular biology
 
 
-### 1.2.1 Download the Obitools container
+## 2.1 Download the Obitools container
 
 ```
 singularity pull --name obitools.simg shub://Grelot/bioinfo_singularity_recipes:obitools
@@ -40,7 +41,7 @@ Alternatively, if you're using the [Montpellier Bioinformatics Biodiversity plat
 singularity pull --name obitools.simg shub://Grelot/bioinfo_singularity_recipes:obitoolsmbb
 ```
 
-### 1.2.2 Run the Obitools container
+## 2.2 Run the Obitools container
 
 ```
 singularity run obitools.simg
@@ -50,7 +51,7 @@ it should output:
 Opening container...ubuntu xenial: OBITOOLS, ecoPRIMERS, ecoPCR, EMBOSS
 ```
 
-### 1.2.3 Execute some programs from the container
+## 2.3 Execute some programs from the container
 
 ```
 ## OBITOOLS: illuminapairedend 
@@ -71,7 +72,7 @@ singularity exec obitools.simg ecoPrimers --help
 singularity exec obitools.simg seqret --help
 ```
 
-## 1.3 Useful programs for eDNA analysis
+# 3. Useful programs for eDNA analysis
 
 - [vsearch 2.13.4](https://github.com/torognes/vsearch) supports de novo and reference based chimera detection, clustering, full-length and prefix dereplication, rereplication, reverse complementation, masking, all-vs-all pairwise global alignment, exact and global alignment searching, shuffling, subsampling and sorting. It also supports FASTQ file analysis, filtering, conversion and merging of paired-end reads.
 - [pear 0.9.11](https://cme.h-its.org/exelixis/web/software/pear/) is an ultrafast, memory-efficient and highly accurate pair-end read merger
@@ -89,7 +90,7 @@ singularity exec obitools.simg seqret --help
 - [usearch 11.0.667](https://www.drive5.com/usearch/) offers search and clustering algorithms that are often orders of magnitude faster than BLAST. 
 - [deML 1.0](https://grenaud.github.io/deML/) demultiplexes Illumina sequences.
 
-### 1.3.1 Download the eDNA analysis container
+## 3.1 Download the eDNA analysis container
 
 ```
 singularity pull --name ednatools.simg shub://Grelot/bioinfo_singularity_recipes:ednatools
@@ -99,7 +100,7 @@ Alternatively, if you're using the [Montpellier Bioinformatics Biodiversity plat
 singularity pull --name ednatools.simg shub://Grelot/bioinfo_singularity_recipes:ednatoolsmbb
 ```
 
-### 1.3.2 Run the eDNA analysis  container
+## 3.2 Run the eDNA analysis  container
 
 ```
 singularity run ednatools.simg
@@ -109,7 +110,7 @@ it should output:
 Opening container...ubuntu beaver: vsearch, PEAR, fastq-join, pandaseq, jellyfish, casper, FLASH, fastq-multx, cutadapt, SWARM, REAPER, tally, minion, swan, tagCleaner, flexbar, usearch, deML 
 ```
 
-### 1.3.3 Execute some programs from the container
+## 3.3 Execute some programs from the container
 
 
 ```
@@ -146,7 +147,7 @@ singularity exec ednatools.simg deML -h
 ```
 
 
-## 1.4 R for metabarcoding analysis
+# 4. R for metabarcoding analysis
 
 This recipe have been written thanks to [RPACIB](https://shiny.mbb.univ-montp2.fr/RPACIB/)
 
@@ -172,7 +173,7 @@ singularity exec ednaR.simg R
 
 
 
-## 1.5 Grinder
+# 5. Grinder
 
 Grinder is a versatile open-source bioinformatic tool to create simulated omic shotgun and amplicon sequence libraries for all main sequencing platforms.
 
@@ -186,3 +187,33 @@ Download the container and run Grinder from the container
 singularity pull --name grinder.simg shub://Grelot/bioinfo_singularity_recipes:grindermbb
 singularity exec grinder.simg grinder -h
 ```
+
+
+## 6. JAMP
+
+JAMP is a modular metabarcoding pipeline, integrating different functions from USEARCH, VSEARCH, CUTADAPT and other programs. The pipeline is run as an R package and automatically generates the needed folders and summary statistics.
+
+- [JAMP](https://github.com/VascoElbrecht/JAMP)
+
+Download the container
+
+```
+singularity pull --name jamp.simg shub://Grelot/bioinfo_singularity_recipes:jamp
+```
+
+Check dependencies
+
+```
+## cast singularity shell
+singularity shell jamp.simg
+## check version of required programs
+usearch --version
+vsearch --version
+cutadapt --version 
+R --version
+## start R session
+R
+## check libraries inside R session
+library(JAMP)
+```
+
