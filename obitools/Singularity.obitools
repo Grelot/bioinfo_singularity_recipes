@@ -14,7 +14,7 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     Obitools 1.0
     ecoPCR 1.0.1
     ecoPrimers 0.5
-     EMBOSS 6.6
+    EMBOSS 6.6
 
 %post   
     mv /etc/apt/sources.list /etc/apt/sources.list.bak
@@ -30,19 +30,6 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     deb-src http://us.archive.ubuntu.com/ubuntu/ xenial-proposed main restricted universe multiverse
     deb-src http://us.archive.ubuntu.com/ubuntu/ xenial-backports main restricted universe multiverse" >> /etc/apt/sources.list
 
-
-    ##  MBB config
-    mkdir -p /share/apps/bin
-    mkdir /share/apps/lib
-    mkdir /share/apps/gridengine
-    mkdir /share/bio
-    mkdir -p /opt/gridengine
-    mkdir -p /export/scrach
-    mkdir -p /usr/lib64
-    /usr/sbin/groupadd --system --gid 400 sge
-    /usr/sbin/useradd --system --uid 400 --gid 400 -c GridEngine --shell /bin/true --home /opt/gridengine sge
-    ln -s /bin/bash /bin/mbb_bash
-    ln -s /bin/bash /bin/isem_bash
 
     ## git, make, wget
     apt-get -y --force-yes update
@@ -77,7 +64,6 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     yes | make
     cp ecoPCR /usr/local/bin/ecoPCR
     cd $HOME
-
 
     ## EMBOSS seqret
     yes | apt install emboss
