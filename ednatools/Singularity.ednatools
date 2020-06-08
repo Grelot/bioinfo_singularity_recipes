@@ -39,6 +39,7 @@ Include: bash vim less man-db apt-utils tzdata
     prinseq 0.20.4
     NGmerge 0.3
     FASTP 0.20.1
+    biopython 1.75
 
 
 %post
@@ -72,7 +73,7 @@ Include: bash vim less man-db apt-utils tzdata
 
     ## pip, biopython2
     yes | apt install python-pip
-    yes | pip2 install biopython
+    yes | pip2 install -I biopython==1.75
 
 
     ## python3
