@@ -5,7 +5,7 @@ Include: bash vim less man-db apt-utils tzdata
 
 
 %runscript
-    echo "Opening container...ubuntu beaver: vsearch, PEAR, fastq-join, pandaseq, jellyfish, casper, FLASH, fastq-multx, cutadapt, SWARM, REAPER, tally, minion, swan, tagCleaner, flexbar, usearch, deML, trimmomatic, prinseq "
+    echo "Opening container...ubuntu beaver: vsearch, PEAR, fastq-join, pandaseq, jellyfish, casper, FLASH, fastq-multx, cutadapt, SWARM, REAPER, tally, minion, swan, tagCleaner, flexbar, usearch, deML, trimmomatic, prinseq, NGmerge, FASTP "
 
 %environment
     export LC_ALL=C.UTF-8
@@ -37,6 +37,8 @@ Include: bash vim less man-db apt-utils tzdata
     JAVA 8.0
     Trimmomatic 0.33
     prinseq 0.20.4
+    NGmerge 0.3
+    FASTP 0.20.1
 
 
 %post
@@ -61,8 +63,8 @@ Include: bash vim less man-db apt-utils tzdata
     yes | apt install wget
     yes | apt-get install autoconf autogen libtool
 
-    ## zlib, boost, cmake
-    yes | apt install zlib1g-dev libbz2-dev pkg-config libboost-all-dev gettext cmake
+    ## zlib, boost, cmake, openmp
+    yes | apt install zlib1g-dev libbz2-dev pkg-config libboost-all-dev gettext cmake libomp-dev
 
     ## curl, lzma, unzip, pigz
     yes | apt-get install curl liblzma-dev libncurses5-dev unzip pigz
@@ -208,3 +210,19 @@ Include: bash vim less man-db apt-utils tzdata
     ## Prinseq
     wget https://github.com/Grelot/bioinfo_singularity_recipes/raw/master/packages/prinseq-lite-0.20.4.tar.gz
     tar xzf prinseq-lite-0.20.4.tar.gz
+
+    ## NGmerge
+    wget https://github.com/jsh58/NGmerge/archive/v0.3.tar.gz
+    tar xzf v0.3.tar.gz
+    cd NGmerge-0.3
+    make
+    cp NGmerge /usr/local/bin/
+    cd ..
+
+    ## FASTP
+    wget https://github.com/OpenGene/fastp/archive/v0.20.1.tar.gz
+    tar xzf v0.20.1.tar.gz
+    cd fastp-0.20.1/
+    make && make install
+	cd ..
+
