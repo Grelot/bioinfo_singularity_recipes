@@ -89,6 +89,9 @@ singularity exec obitools.simg seqret --help
 - [Flexbar 3.0.3](https://github.com/seqan/flexbar) preprocesses high-throughput sequencing data efficiently. It demultiplexes barcoded runs and removes adapter sequences. Several adapter removal presets for Illumina libraries are included. 
 - [usearch 11.0.667](https://www.drive5.com/usearch/) offers search and clustering algorithms that are often orders of magnitude faster than BLAST. 
 - [deML 1.0](https://grenaud.github.io/deML/) demultiplexes Illumina sequences.
+- [NGmerge](https://github.com/jsh58/NGmerge) merges paired-end reads and removes adapters. 
+- [FASTP](https://github.com/OpenGene/fastp) is an ultra-fast all-in-one FASTQ preprocessor (QC/adapters/trimming/filtering/splitting/merging...) 
+
 
 ## 3.1 Download the eDNA analysis container
 
@@ -144,6 +147,12 @@ singularity exec ednatools.simg flexbar -h
 singularity exec ednatools.simg usearch
 ## deML
 singularity exec ednatools.simg deML -h
+## prinseq
+singularity exec ednatools.simg perl /prinseq-lite-0.20.4/prinseq-lite.pl -h
+## NGmerge
+singularity exec ednatools.simg NGmerge -h
+## FASTP
+singularity exec ednatools.simg fastp -h
 ```
 
 
