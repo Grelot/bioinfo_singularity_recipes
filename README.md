@@ -110,7 +110,7 @@ singularity run ednatools.simg
 ```
 it should output:
 ```
-Opening container...ubuntu beaver: vsearch, PEAR, fastq-join, pandaseq, jellyfish, casper, FLASH, fastq-multx, cutadapt, SWARM, REAPER, tally, minion, swan, tagCleaner, flexbar, usearch, deML 
+Opening container...ubuntu beaver: vsearch, PEAR, fastq-join, pandaseq, jellyfish, casper, FLASH, fastq-multx, cutadapt, SWARM, REAPER, tally, minion, swan, tagCleaner, flexbar, usearch, deML, trimmomatic, prinseq, NGmerge, FASTP
 ```
 
 ## 3.3 Execute some programs from the container
