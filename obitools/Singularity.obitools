@@ -38,14 +38,12 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     yes | apt install wget
     yes | apt-get install autoconf autogen
 
-    ## zlib, libgcc, xorg
+    ## zlib
     yes | apt install zlib1g-dev
-    yes | apt install libgcc-ng=7.3.0
-    yes | apt install xorg-libx11
-    yes | apt install xorg-libxau
+
  
     ## OBITOOLS v1
-    yes | apt-get install python2-pip
+    yes | apt-get install python-pip
     yes | pip2 install --upgrade pip==9.0.3
     pip2 install virtualenv==1.11.0
     pip2 install ipython==6.0
