@@ -38,17 +38,21 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     yes | apt install wget
     yes | apt-get install autoconf autogen
 
-    ## zlib
+    ## zlib, libgcc, xorg
     yes | apt install zlib1g-dev
-  
+    yes | apt install libgcc-ng=7.3.0
+    yes | apt install xorg-libx11
+    yes | apt install xorg-libxau
+ 
     ## OBITOOLS v1
-    yes | apt-get install python-pip
-    yes | pip install --upgrade pip==9.0.3
-    pip install -U virtualenv
-    pip install -U sphinx
-    pip install -U cython
-    pip install OBITools
-    
+    yes | apt-get install python2-pip
+    yes | pip2 install --upgrade pip==9.0.3
+    pip2 install virtualenv==1.11.0
+    pip2 install ipython==6.0
+    pip2 install sphinx==2.0
+    pip2 install cython==0.24
+    pip2 install OBITools
+
     ## ecoPRIMERS
     wget https://git.metabarcoding.org/obitools/ecoprimers/uploads/40f0fe1896a15ca9ad29835f93893464/ecoPrimers.tar.gz
     tar -zxvf ecoPrimers.tar.gz
